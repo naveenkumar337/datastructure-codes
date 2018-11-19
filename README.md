@@ -13,4 +13,4 @@ you can remove only the top book, also you can add a new book on the top.
 ##### PUSH:it is used for add or insert data to the stack.
 ##### POP: it is used for delete or retrive data to the stack.
 ##### PEEK: it display the top data in the stack.
-##### TRAVARSE: is display the data in stack. 
+##### TRAVARSE: it display's the data in stack. 
