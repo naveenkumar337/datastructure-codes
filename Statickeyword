@@ -1,0 +1,6 @@
+
+static is a keyword,it is used for sherability purpose.
+static method,variable are not create a any object.
+it was belongs to the class not an objet.
+it mainly used for memory efficient(reduce).
+it will write without creation of object.
