@@ -1,0 +1,63 @@
+/**
+ * Linked list was used for mainly add and remove elements at middle of list
+ * LinkedList are best choice at insettion and deletion of list element,because it just link the next list element
+ *
+ * LinkedLIst are worst choice at retrieve operation (access) ,because it was ask for previous node for location of a current  node *
+ * here we perform add,remove,access descending_order,addFirst,addLast,Remove first,remove last
+ */
+import java.util.*;
+public class LinkedList1{
+    public static void main(String args[]){
+        //linked list declaration
+        LinkedList<Integer> al=new LinkedList<Integer>();
+
+        //add element to linked list
+        al.add(30);
+        al.add(20);
+        al.add(10);
+        al.add(40);
+        al.add(0,25);
+        //add at index 0
+        al.addFirst(10);
+
+        LinkedList<Integer> li1=new LinkedList<Integer>();
+
+        li1.add(1);
+        li1.add(2);
+        li1.add(3);
+
+        //add one list into another list
+        al.addAll(li1);
+        System.out.println("al size is:"+al.size());
+
+        Iterator<Integer> itr=al.iterator();
+        System.out.println("list is as follows:");
+        while(itr.hasNext()){
+            System.out.println(itr.next());
+        }
+        //remove methods
+        //remove at recently added
+        al.remove();
+        //remove first element
+        al.removeFirst();
+        //remove at particular index
+        al.remove(0);
+        //remove last element
+        al.removeLast();
+
+        System.out.println("list after removal"+al);
+
+
+
+        LinkedList<Integer> ll=new LinkedList<Integer>();
+        ll.add(100);
+        ll.add(200);
+        ll.add(300);
+        //Traversing the list of elements in reverse order
+        Iterator i=ll.descendingIterator();
+        while(i.hasNext())
+        {
+            System.out.println(i.next());
+        }
+    }
+}
