@@ -14,3 +14,28 @@ you can remove only the top book, also you can add a new book on the top.
 ##### POP: it is used for delete or retrive data to the stack.
 ##### PEEK: it display the top data in the stack.
 ##### TRAVARSE: it display's the data in stack. 
+
+# ARRAY-LIST
+with code
+##### Definition:
+            Java ArrayList class uses a dynamic array for storing the elements. It inherits AbstractList class and implements List interface.
+         
+Let's see the declaration for java.util.ArrayList class.
+                       public class ArrayList<E> extends AbstractList<E> implements List<E>, RandomAccess, Cloneable, Serializable
+
+
+##### Generic Collection:
+                        Java generic collection allows to have only one type of object in a collection(such as Int,String,Float).
+                        ex:
+                            public class Arraylist{
+                                    public static void main(String[] args){
+                                         ArrayList<String> al=new ArrayList<String>();
+                                           al.add("mango");
+                                           al.add("apple");
+                                           al.add("orange");
+                                           al.addFirst("grapes");//add at starting level
+                                           al.addLast("banana");//add at ending level
+                                           al.remove(3);//remove list
+                                           al.set(1,"potato");//update list
+                                            }
+                                    }
