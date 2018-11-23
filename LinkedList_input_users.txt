@@ -1,0 +1,109 @@
+package linkedlist;
+import java.util.*;
+
+public class LinkedListDemo {
+	private static   Scanner sc=new Scanner(System.in);
+    private static LinkedList<Integer> li=new LinkedList<Integer>();
+	
+    public static void main(String[] args) {
+    	
+      
+    	l1:              
+      while(true) {
+    	  System.out.println("1.Add");
+    	  System.out.println("2.AddatIndex");
+    	  System.out.println("3.addFirst");
+    	  System.out.println("4.addLast");
+    	  System.out.println("5.Remove");
+    	  System.out.println("6.RemoveFirst");
+    	  System.out.println("7.RemoveLast");
+    	  System.out.println("8.PrintList");
+    	  System.out.println("9.getsize");    	  
+    	  System.out.println("10.Exit");
+    	  
+    	  int ch;
+    	  System.out.println("Enter your choice");
+    	  ch=sc.nextInt();
+    	  
+	    	switch(ch) {
+			    	  case 1: additem();		    	  	
+			    	  		break;
+			    	  case 2:addatpos();		    		  
+			    		  break;
+			    	
+			    	  case 3:addfirstitem();
+			    		  
+			    		  break;
+			    		  
+			    	  case 4:addlastitem();
+			    	  			break;
+			    	  			
+			    	  case 5:removeitem();
+			    	  		break;
+			    	  case 6:removefirstitem();
+			    	  		break;
+			    	  case 7:removelastitem();
+			    	  		break;
+			    	  		
+			    	  case 8:printlist();
+			    	  			break;
+			    	  case 9:getsize();
+			    	  		break;
+			    	  
+			    	  case 10:System.exit(0);
+			    	  		break;
+			    	  default:
+			    		  System.out.println("Your enter wrong choice");
+	    	  }
+    	  System.out.println("=========================");
+    	// System.out.println( li.peek());
+    	 
+    	  }
+        }
+    public static void additem() {
+    	
+    	
+    			System.out.println("Enter element to push");
+    	    	li.add(sc.nextInt());
+    	    	
+    	
+    }
+    public static void addfirstitem() {
+    	System.out.println("Enter element to push");
+    	li.addFirst(sc.nextInt());
+    }
+    public static void addlastitem() {
+    	System.out.println("Enter element to push");
+    	li.addLast(sc.nextInt());
+   }
+    public static void addatpos() {
+    	System.out.println("Enter at position to add:");
+		  int pos=sc.nextInt();
+		  System.out.println("Enter elemnt to add:");
+		  int newitem=sc.nextInt();
+		  li.add(pos,newitem);
+    	
+    }
+    public static void printlist() {
+    	System.out.println("Linkedlist is:"+li);
+    }
+    public static void removeitem() {
+    	System.out.println("Enter position:");
+		  li.remove(sc.nextInt());
+    }
+   public static void removefirstitem() {
+    	System.out.println("Enter position:");
+		  	  li.removeFirst();
+    }
+    public static void removelastitem() {
+    	System.out.println("Enter position:");
+		  		  li.removeLast();
+    }
+    public static void getsize() {
+    	System.out.println("list size is:"+li.size());
+    }
+    
+    
+  }
+   
+
