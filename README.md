@@ -39,3 +39,19 @@ Let's see the declaration for java.util.ArrayList class.
                                            al.set(1,"potato");//update list
                                             }
                                     }
+
+
+
+# LINKEDLIST:
+              Linked List is a very commonly used linear data structure which consists of group of nodes in a sequence.
+
+Each node holds its own data and the address of the next node hence forming a chain like structure.
+
+Linked Lists are used to create trees and graphs.
+
+Linked List implements Serializable and Clonable interface but not RandomAceess interface.
+Linkedlist is the best choice if our frequent operation is insertion or delition in the middle.
+linkedlist is the worst choice if our frequent operation is retrieval operation.
+##### LinkedList Constructores:
+                        LinkedList li=new LinkedList(); -->create an emptylist
+                        LinkedList li=new LinkedList(Collection c); -->create an equivalent object
