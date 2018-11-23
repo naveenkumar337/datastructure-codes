@@ -1,0 +1,91 @@
+package vector;
+import java.util.*;
+
+public class vector {
+	public static void main(String[] args) {
+		//empty vector with initial capacity 10
+		Vector<Integer> v=new Vector<Integer>();
+		v.addElement(10);
+		v.addElement(20);
+		v.add(30);
+		v.add(40);
+		
+		//add element at index
+		v.add(0, 5);
+		
+		v.add(50);
+		v.add(60);
+		v.add(70);
+		v.add(80);
+		v.add(90);
+		System.out.println("before overflow capacity:"+v.capacity());
+		System.out.println("before overflow elements"+v);
+		
+		//add element to overflow initial capacity
+		v.add(100);
+		System.out.println("after overflow capacity:"+v.capacity());
+		System.out.println(v);
+		
+		//vector with initial capacity 20
+		Vector<Integer> v1=new Vector<Integer>(20);
+		v1.add(1);
+		v1.addElement(2);
+		v1.add(3);
+		v1.add(4);
+		v1.addElement(5);
+		System.out.println(v1);
+		System.out.println("check capacity of v1:"+v1.capacity());
+		
+		//creation of vector with initial_capacity and incremental_capacity
+				Vector<Integer> v2=new Vector<Integer>(15,5);
+		
+		v2.add(101);
+		v2.add(0,100);
+	
+		//remove methods
+		System.out.println("remove element at list:"+v2.removeElement(101));
+		
+		v.remove(5);
+		v.removeElementAt(9);//remove at index 9 of vector(v).
+		System.out.println("after remove method:"+v);	
+		
+		//creation of vector with collection
+		Vector<Integer> v3=new Vector<Integer>();
+		v3.addAll(v1);
+		v3.addAll(0,v);
+		v3.addAll(v2);
+		System.out.println("after combine all vectors collections:"+v3);
+		System.out.println("capacity of v2:"+v2.capacity());
+		
+		//Othermethods
+		System.out.println();
+		System.out.println(v3.size());
+		System.out.println("v3 capacity:"+v3.capacity());
+		
+		//get at index value:
+		System.out.println(v3.get(5));
+		
+		//check privious vector data contain or not: 
+		System.out.println(v3.containsAll(v1));
+		
+		//it return class where we store
+		System.out.println(v3.getClass());
+		
+		//return sub list using fromindex to toindex
+		System.out.println(v3.subList(10, 14));
+		
+		//returns lastelement in vector
+		System.out.println(v3.lastElement());
+		
+		//returns all elemnts in a vector
+		System.out.println(v3.clone());
+		
+		//clear a vctor
+		v3.clear();
+		System.out.println(v3);
+		
+		
+	}
+
+	
+}
