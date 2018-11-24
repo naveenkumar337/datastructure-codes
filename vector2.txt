@@ -1,0 +1,123 @@
+package vector;
+
+
+import java.util.*;
+
+public class vectordynamically {
+	private static   Scanner sc=new Scanner(System.in);
+    private static Vector<Integer> v=new Vector<Integer>();
+	
+    public static void main(String[] args) {
+    	
+      
+    	l1:              
+      while(true) {
+    	  System.out.println("1.Add");
+    	  System.out.println("2.AddElement");
+    	  System.out.println("3.addAtpos");
+    	  System.out.println("4.remove");
+    	  System.out.println("5.RemoveElement");
+    	  System.out.println("6.RemoveElementAt");
+    	  System.out.println("7.capacity");
+    	  System.out.println("8.PrintList");
+    	  System.out.println("9.getsize");  
+    	  System.out.println("10.sublist");
+    	  System.out.println("11.Exit");
+    	  
+    	  int ch;
+    	  System.out.println("Enter your choice");
+    	  ch=sc.nextInt();
+    	  
+	    	switch(ch) {
+			    	  case 1: additem();		    	  	
+			    	  		break;
+			    	  case 3:addatpos();		    		  
+			    		  break;
+			    	
+			    	  case 2:addElement();
+			    		  
+			    		  break;
+			    		  
+			    	  			    	  			
+			    	  case 4: removeitem();
+			    	  		break;
+			    	  case 5:removeElement();
+			    	  		break;
+			    	  case 6:removeElementat();
+			    	  		break;
+			    	  case 7:System.out.println(v.capacity());
+			    	  		break;
+			    	  		
+			    	  case 8:printlist();
+			    	  			break;
+			    	  case 9:getsize();
+			    	  		break;
+			    	  case 10:
+			    		  Sublist();
+			    		  break;
+			    	  case 11:System.exit(0);
+			    	  		break;
+			    	  default:
+			    		  System.out.println("Your enter wrong choice");
+	    	  }
+    	  System.out.println("=========================");
+    	// System.out.println( v.peek());
+    	 
+    	  }
+        }
+    private static void Sublist() {
+		System.out.println("enter fromIndex:");
+		int pos1=sc.nextInt();
+		System.out.println("enter toIndex:");
+		int pos2=sc.nextInt();
+		System.out.println("Your SUBLIST is:"+v.subList(pos1, pos2));
+		
+	}
+	public static void additem() {
+    	
+    	
+    			System.out.println("Enter element to push");
+    	    	v.add(sc.nextInt());
+    	    	
+    	
+    }
+    public static void addElement() {
+    	System.out.println("Enter element to push");
+    	v.addElement(sc.nextInt());
+    }
+    
+    public static void addatpos() {
+    	System.out.println("Enter at position to add:");
+		  int pos=sc.nextInt();
+		  System.out.println("Enter elemnt to add:");
+		  int newitem=sc.nextInt();
+		  v.add(pos,newitem);
+    	
+    }
+    public static void printlist() {
+    	System.out.println("Linkedlist is:"+v);
+    }
+    public static void removeitem() {
+    	System.out.println("Enter position:");
+    	int ele=sc.nextInt();
+		  v.remove(ele);
+    }
+   public static void removeElement() {
+    	System.out.println("Enter position:");
+    	int ele=sc.nextInt();
+		  	  v.removeElement(ele);
+    }
+    public static void removeElementat() {
+    	int pos;
+    	System.out.println("Enter position:");
+    	pos=sc.nextInt();
+		  v.removeElementAt(pos);
+    }
+    public static void getsize() {
+    	System.out.println("list size is:"+v.size());
+    }
+    
+    
+  }
+   
+
