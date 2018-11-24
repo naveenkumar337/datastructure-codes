@@ -1,3 +1,19 @@
+/** 
+* vector is same to as arraylist,but small difference that is arraylist was not allow synchronized data then vector allow synchronized  * data.
+* vectors are follow threadsafe ,arraylist are not threadsafe becuase it allows at atime multiple threads.in vector it allow one by one.
+* vectors are allow randomaccess technology
+
+* vector contain 4 constructors:
+* 1.vector v=new vector();
+*	it is a null constructor it capacity is 10.if we insert more then 10 the capacity is increase twice(newcapacity=2*oldcapacity).
+* 2.Vector v=new Vector(capacity);
+*	here,defaultly we given capacity of vector.
+* 3.Vector v=new Vector(initial_capacity,increamental_capacity);
+*	this is best way of using vector,becuase first we given initial capacity then given incrementa_capacity we add more the initial *	capacity was considered.
+* 4.vector v=new vector(collection c);
+*	here,we can add previous collection vector data.
+*/
+
 package vector;
 import java.util.*;
 
