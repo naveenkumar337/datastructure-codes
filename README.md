@@ -68,3 +68,50 @@ linkedlist is the worst choice if our frequent operation is retrieval operation.
 3. LinkedList class can act as a list and queue both because it implements List and Deque interfaces.
 4. LinkedList is better for manipulating data.
 
+
+
+# VECTOR
+            vector implements dynamic array. It is similar to Arraylist,but with two difference 
+                        1.vector is synchronized.
+                        2.vector contain lagacy methods thats not part of collection framework.
+  ##### Vetor follows some points:
+    1.Its allow duplicate values.
+    2.Insertion order is Preserved.
+    3.Null insertion is possible.
+    4.Hetrogeneous objects are allowed.
+    5.Vector class implements serializable,cloneble and randoaccess.
+    6.It is best choice for if our frequent operation is retrieval.
+    7.Underlying datastructure for vector is Resizable array.
+## Difference between ArrayList and Vector:
+##### ArrayList:
+1. ArrayList is not synchronized.
+2. ArrayList increments 50% of current array size if the number of elements exceeds from its capacity.
+3. ArrayList is not a legacy class.
+4. ArrayList is fast because it is allow multiple thead methods at a time.
+##### Vector:
+1. Vector is synchronized.
+2. Vector increments 100% means doubles the array size if the total number of elements exceeds than its capacity.
+3. Vector is a legacy class.
+4. Vector is slow because it is allow only one thread method at a time.
+
+# SETS
+            Set is chaild interface of collections. If we represents a group of individual objects as a single entity,whre duplicates are not allowed and insertion order not preserved, Then we use sets.
+            sets does not contain any new methods.
+            
+            Besically sets are:
+            1. HashSet
+            2. LinkedHashSet
+            3. SortedSet
+            4. NavigableSet
+            5. TreeSet
+            
+## 1.HASHSET:
+##### Importent points of HashSet
+   1. The undelying datastructure is HASH TABLE.
+   2. Duplicates are not allowed,if we trying to insert duplicate values,we won't get any compilation and runtime errors,it's simply returns flase.
+   3. Insertion order not preserved and all objects will be inserted based on HASHCODE of objects
+   4. Hetrogeneous objects are allowed.
+   5. Null insertion is possible.
+   6.implementation os Serializable and cloneble are possible.
+   7. HashSet is best for our frequent operation is Search.
+   
