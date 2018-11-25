@@ -1,0 +1,47 @@
+/**
+	 * Hashset not follow the insertion order
+	 * Values stored based on hashcode.
+	 * */
+
+	import java.util.*;
+public class LinkedHashSetEx {
+	
+
+		public static void main(String[] args) {
+			//create empty LinkedHashSet with initial capacity 16
+			LinkedHashSet ls=new LinkedHashSet();
+			ls.add(5);
+			ls.add(10);
+			ls.add(20);
+			ls.add(30);
+			ls.add(null);
+			ls.add("mango");
+		System.out.println("ls size is:"+	ls.size());
+		
+		//constructor with initial capacity 5
+		LinkedHashSet ls1=new LinkedHashSet(5);
+		ls1.add(1);
+		ls1.add(2);
+		ls1.add(3);
+		ls1.add(4);
+		ls1.add(5);
+		//if try to add more then initial capacity then it create double of initial capacity.
+		ls1.add(6);
+		//your add duplicate value,it returns false
+		System.out.println("duplicate value add is:"+ls1.add(4));
+		
+		//constructor with initialcapacity=15 laodfactor=50%
+		LinkedHashSet ls2=new LinkedHashSet(15,(float)0.50);
+			//here we add all set elemrnts of ls1 into ls2.
+			System.out.println(ls2.addAll(ls1));
+			
+		//constructor with collection of ls2
+			LinkedHashSet ls3=new LinkedHashSet(ls2);
+			System.out.println(ls3);
+			
+			//check set is empty or not
+			System.out.println("set is empty:"+ls3.isEmpty());
+		}
+
+	}
+

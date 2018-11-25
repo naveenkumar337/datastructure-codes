@@ -1,0 +1,60 @@
+/**
+ * Hashset not follow the insertion order
+ * Values stored based on hashcode.
+ * */
+
+import java.util.*;
+public class hashset {
+	public static void main(String[] args) {
+		HashSet s=new HashSet();
+		s.add(10);
+		s.add(20);
+		s.add(5);
+		s.add(30);
+		s.add(null);
+		s.add("mango");
+		s.add(12);
+		s.add(13);
+		s.add(14);
+		s.add(15);
+		s.add(16);
+		//if we trying  duplicates, simply it returns false 
+		System.out.println(s.add(5));
+
+		//check if our set is empty or not.if empty it returns true otherwise returns false.
+		System.out.println(s.isEmpty());
+		System.out.println(s.remove(null));
+		
+		//remove particular element
+		System.out.println(s.remove(10));
+		
+		//here,we check our item is in the set or not
+		System.out.println(s.contains("orange"));
+		
+		System.out.println(s);
+		//check size of set
+		System.out.println(s.size());
+		
+		
+		//create a constructor with initial capacity 20
+		HashSet s1=new HashSet(20);
+		s1.add(7.05);
+		s1.add("banana");
+		s1.addAll(s);
+		
+		//create constructor with initialcapacity=16 and loadfactor=80%		
+		HashSet s2=new HashSet(16,(float) 0.80);
+		s2.addAll(s1);
+		s2.add(20);
+		s2.add(100);
+		s2.add(200);
+		System.out.println(s.containsAll(s));
+		System.out.println(s2);
+		
+		//creation of constructor with collection of s2. 
+		HashSet s3=new HashSet(s2);
+		System.out.println(s3);
+		
+	}
+
+}
