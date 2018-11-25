@@ -115,3 +115,26 @@ linkedlist is the worst choice if our frequent operation is retrieval operation.
    6.implementation os Serializable and cloneble are possible.
    7. HashSet is best for our frequent operation is Search.
    
+ #### Constructors of HashSet
+            1.  Hashset set=new Hashset();
+                       - It is empty set with initial capacity=16 and default Fill ratio=0.75(it means after insertion of 75% increase capacity).
+            
+            2.  Hashset set=new Hashset(int initialcapacity);
+                        -Creates an empty hashset object with specified initial capacity and default fillratio=0.75.
+                        
+            3.  Hashset set=new Hashset(int initialcapacity,float loadcapacity);
+            
+                        -Creates an empty hashset object with specified initialcapacity and loadfactor.
+            
+            4.  Hashset set=new Hashset(Collection c);
+                        -For inter convention between collection object.
+                        
+
+## 2.LINKEDHASHSET:
+            It is chaild interface of Hashset.
+   Importent points are:
+  1. It was introduced in 1.4 version.
+  2. It is exactly same as hashset except following difference
+     1. The underlying datastructure is hashcode+linkedlist.
+     2. insertion order is not preserved.
+ 
