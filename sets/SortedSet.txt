@@ -1,0 +1,61 @@
+
+/**
+ * It is mainly used for print element at sorted order.
+ * Here,heterogeneous elements are not allowed.
+ *Duplicates are not allow,if we add duplicate values it's return only once.
+ * In this we follow mainly 6 methods(last,first,comparator,head set,tail set,subset).
+ */
+
+import java.util.*;
+public class SortedSetEx {
+
+	public static void main(String[] args) {
+		
+		SortedSet ss=new TreeSet();
+		//add elements
+		ss.add(1);
+		ss.add(2);
+		ss.add(5);
+		ss.add(4);
+		ss.add(3);
+		ss.add(6);
+		ss.add(7);
+		ss.add(8);
+		ss.add(9);
+		ss.add(10);
+		ss.add(10);
+		
+		//prints element by using iterator
+		Iterator itr=ss.iterator();
+		System.out.println("elements are:");
+		while(itr.hasNext()) {
+			System.out.println(itr.next());
+		}
+		
+		/**
+		 ss.add("num");
+		 if we add except integer it's rise run-time exception.
+		*/
+		
+		System.out.println();
+		System.out.println(ss);
+		//print first element
+		System.out.println(ss.first());
+		//print last element
+		System.out.println(ss.last());
+		//print elements 1,2
+		System.out.println(ss.headSet(3));
+		//print elements 2-10
+		System.out.println(ss.tailSet(2));
+		//check sortedset is empty or not
+		System.out.println(ss.isEmpty());
+		//if any default sorting methods  are there it's returns null
+		System.out.println(ss.comparator());
+		//to create new set from 5 to 9
+		System.out.println(ss.subSet(5,9));
+		//remove element 4
+		System.out.println(ss.remove(4));
+
+	}
+
+}
