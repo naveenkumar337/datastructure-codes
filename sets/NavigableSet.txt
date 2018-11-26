@@ -1,0 +1,74 @@
+/**
+ * 1.Floor(e):
+           -it returns highest element which is <=e.
+   2.Lower(e):
+           -it returns highest element which is <e.
+   3.Celling(e):
+           -it returns lowest element which is >=e.
+   4.higher(e):
+           -it returns lowest element which is >=e.
+   5.Pollfirst():
+           -remove and returns first element.
+   6.Polllast():
+           -remove and returns last element.
+   7.descendingset():
+          -It returns navigableset in rever order.
+ 
+ *
+ *
+ *It is child interface of SortedSet.
+ */
+
+import java.util.*;
+public class Navigableset {
+
+	public static void main(String[] args) {
+		TreeSet ts=new TreeSet();
+		
+		ts.add("mango");
+		ts.add("banana");
+		ts.add("apple");
+		ts.add("grapes");
+		ts.add("straberry");
+		ts.add("orange");
+		ts.add("guava");
+		ts.add("jackfruit");
+		ts.add("apricots");
+		ts.add("cherries");
+		ts.add("feijoa");
+		
+		System.out.println("items are printed in sorted order: " +ts);
+		
+		//Returns the least element in this set greater than or equal to the "orange", or null if there is no such element.
+		System.out.println("returns least element: "+ts.ceiling("orange"));//orange
+		/**
+		 * Returns a view of the portion of this set whose elements are greater than (or equal to, if inclusive is true) fromElement.
+		 * if we give false it returns immediate greater then value only [lessthenvalue] 
+		 * if we give true it return immediate greater then value with given value like[givenvlaue,lessthen value].
+		 * */
+		System.out.println(ts.tailSet("orange", false)); 
+		/**
+		 * Returns a view of the portion of this set whose elements are greater than (or equal to, if inclusive is true) fromElement
+		 * it returns values which are there before banana value.
+		 */
+		System.out.println(ts.headSet("banana", true));
+		
+		System.out.println(ts.lower("cherries"));
+		
+		//it returns lowest element which is >=e.
+		System.out.println(ts.higher("cherries"));
+		
+		//it returns highest element which is <=e.
+		System.out.println(ts.floor("grapes"));
+		
+		//returns and remove first element.
+		System.out.println(ts.pollFirst());
+		//returns and remove last element.
+		System.out.println(ts.pollLast());
+		
+		System.out.println("after delition order:"+ts);
+		System.out.println("after delition reverse order is: " +ts.descendingSet());
+		
+	}
+
+}
