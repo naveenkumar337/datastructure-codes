@@ -137,4 +137,59 @@ linkedlist is the worst choice if our frequent operation is retrieval operation.
   2. It is exactly same as hashset except following difference
      1. The underlying datastructure is hashcode+linkedlist.
      2. insertion order is not preserved.
- 
+
+## 3.SORTEDSORT
+            It is chaild interface of set. If we want individual objects represent according to some sorting order and without allow the duplicates,then we go for sortedset.
+            ex: store employee details as per emp_id.
+##### METHODS:
+      1.object first()
+            -returns first element os sorted set.
+      2.object last()
+            -returns last element of sorted set.
+      3.SortedSet headSet()
+            -returns the sortedset whose elements are <obj.
+      4.SoretdSet tailSet()
+            -returns the sortedset whose elements are >=obj.
+      5.SortedSet subset(Object obj,Object obj)
+            -returns the sortedset whose elements are >=obj1 and <obj2.
+      6.Comparator comparator()
+            -returns comparator object that describe underlying sorting techniques,if we are using default natural sorting order then we will get Null.
+            
+           
+## 4.NAVIGABLESET
+            It is chaild interface of SortedSet. It defines several methods for navigation purposse.
+##### METHODS:
+            1.Floor(e):
+                        -it returns highest element which is <=e.
+             2.Lower(e):
+                         -it returns highest element which is <e.
+             3.Celling(e):
+                        -it returns lowest element which is >=e.
+             4.higher(e):
+                        -it returns lowest element which is >=e.
+             5.Pollfirst():
+                        -remove and returns first element.
+            6.Polllast():
+                         -remove and returns last element.
+            7.descendingset():
+                         -It returns navigableset in rever order.
+            
+            
+## 5.TREESET
+
+   Importent points of TreeSet are:
+  
+    1.The undelying datastructure for treeset is balenced tree.
+    2.Duplicates are not allowed.
+    3.Insertion order is not preserved,but all objects will be inserted according to some insertion order.
+    4.Heterogeneous objects are not allowed,if we try to insert heterogeneous objects then we get runtim exception:class cast exception
+    5.null insertion is possible,but it allow only once.
+
+##### CONSTRUCTOR OF TREESET:
+            1. TreeSet ts=new TreeSet();
+                        -creates an empty treeset object where elemnts will be inserted according to DEFUALT NATURAL SORTING ORDER.
+            2. TreeSet ts=new TreeSet(Comparator c);
+                        -creates an empty treeset object where elemnts will be inserted according to CUSTOMIZED SORTING ORDER.
+            3. TreeSet ts=new TreeSet(SortedSet s);
+            4. TreeSet ts=new TreeSet(Collection c);
+     
