@@ -1,0 +1,33 @@
+import java.util.*;
+public class mapdemo {
+
+	public static void main(String[] args) {
+		 
+		Map m=new HashMap();
+		
+		m.put(01,"naveen");
+		m.put(02,"rajesh");
+		m.put(03,"ranja");
+		m.put(04,"janjaa");
+		m.put(05,"lokesh");
+				
+		System.out.println(m);
+		//replace an value with key
+		System.out.println(m.put(4, "raju"));
+		System.out.println(m);
+		//get value at particular key.
+		System.out.println(m.get(5));
+		//remove an value at particular key.
+		System.out.println(m.remove(04));
+		System.out.println(m);
+		//check weather key present or not
+		System.out.println(m.containsKey(04));
+		//check weather value present or not
+		System.out.println(m.containsValue("naveen"));
+		//get size of map.
+		System.out.println(m.size());
+		
+
+	}
+
+}
