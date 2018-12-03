@@ -1,0 +1,147 @@
+
+  this values are store based on hashcode values
+  setkey--returns all key in the map
+  setvalue--returns all values in the map
+  get-- returns value at particular key
+  put-- add values to the map
+  containskey--check weather given key is present or not
+  containsvalue--check weather given value is present or not
+  size-returns how many values,keys are in map(total size)
+ 
+
+
+
+import java.util.;
+public class HashMapDemo {
+	private static Scanner sc=new Scanner(System.in);
+	private static HashMap hm=new HashMap();
+
+		public static void main(String[] args) {
+		 
+		 int ch;
+		 
+		 while(true) {
+			 
+			 System.out.println(choose your option.);
+			 System.out.println(==================);
+			 
+			 System.out.println(1.put);
+			 System.out.println(2.remove);
+			 System.out.println(3.setkey);
+			 System.out.println(4.setvalue);
+			 System.out.println(5.get);
+			 System.out.println(6.containkey);
+			 System.out.println(7.containvalue);
+			 System.out.println(8.dispaly);
+			 System.out.println(9.size);
+			 System.out.println(10.exit);
+			 
+			 System.out.println(enter your choice);
+			 ch=sc.nextInt();
+			 
+			 switch(ch) {
+			 declaration of put method
+			 case 1 put();
+			 		break;
+			 declaration of remove method
+			 case 2remove();
+			 		break;
+			declaration of keyset method
+			 case 3
+				 	setkey();
+				 	break;
+			declaration of setvalue.
+			 case 4
+				 setvalue();
+				 break;
+			declaration of get method
+			 case 5
+				 get();
+				 break;
+			declaration of containkey method
+			 case 6
+				 containskey();
+				 break;
+		  declaration of containvalue method
+			 case 7
+				 containvalue();
+				 break;
+		declaration pf display method
+			 case 8
+				 display();
+				 break;
+			 case 9size();
+				 
+				 break;
+			 case 10
+				 System.exit(0);
+				 break;
+			default
+				System.out.println(enter correct choice);
+				break;
+				 
+			 }
+			 System.out.println();
+			 System.out.println();
+		 }
+		}
+get size of map.
+private static void size() {
+	System.out.println(size is+hm.size());
+			
+		}
+
+initialization	display method
+	private static void display() {
+		System.out.println(hm);
+		
+	}
+	
+initialization of containvalue
+	private static void containvalue() {
+		System.out.println(enter vcalue for check contain or not);
+		System.out.println(value contain+hm.containsValue(sc.nextInt()));
+		}
+
+	initialization of containskey method
+	private static void containskey() {
+
+		System.out.println(enter key for check contain or not);
+		System.out.println(key contain+hm.containsKey(sc.nextInt()));
+		
+	}
+	
+	initialization of get method
+
+	private static void get() {
+		
+		System.out.println(enter to get value  at key);
+		System.out.println(your value at key is+hm.get(sc.nextInt()));
+	}
+initialization of setkey mehod
+
+	private static void setkey() {
+		System.out.println(keys are+hm.keySet());
+		
+	}
+initialization of remove method
+	private static void remove() {
+		System.out.println(enter key for remove);
+		System.out.println(hm.remove(sc.nextInt()));
+		
+	}
+initialization of setvalue method
+	private static void setvalue() {
+		System.out.println(values are+hm.entrySet());
+		
+	}
+initialization of put method
+	public static void put() {
+		System.out.println(enter key);
+		int key=sc.nextInt();
+		System.out.println(enter value);
+		String value=sc.nextLine();
+		hm.put(key,sc.nextInt());
+	}
+
+}
