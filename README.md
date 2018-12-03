@@ -179,11 +179,11 @@ linkedlist is the worst choice if our frequent operation is retrieval operation.
 
    Importent points of TreeSet are:
   
-    1.The undelying datastructure for treeset is balenced tree.
-    2.Duplicates are not allowed.
-    3.Insertion order is not preserved,but all objects will be inserted according to some insertion order.
-    4.Heterogeneous objects are not allowed,if we try to insert heterogeneous objects then we get runtim exception:class cast exception
-    5.null insertion is possible,but it allow only once.
+  1. The undelying datastructure for treeset is balenced tree.
+  2. Duplicates are not allowed.
+  3. Insertion order is not preserved,but all objects will be inserted according to some insertion order.
+  4. Heterogeneous objects are not allowed,if we try to insert heterogeneous objects then we get runtim exception:class cast exception
+  5. null insertion is possible,but it allow only once.
 
 ##### CONSTRUCTOR OF TREESET:
             1. TreeSet ts=new TreeSet();
@@ -193,3 +193,97 @@ linkedlist is the worst choice if our frequent operation is retrieval operation.
             3. TreeSet ts=new TreeSet(SortedSet s);
             4. TreeSet ts=new TreeSet(Collection c);
      
+
+# MAPS
+
+            It is not a chaild interface of collection,Maps are perfect to use for key-value association mapping such as dictionaries.
+            if you have group of elements keep as pairs [key,value].
+            -->it was mainly used for add and retrive which values are based on Key.
+            
+           -->maps are considered as FIVE types:
+                                    1.HASHMAP
+                                    2.LINKEDHASHMAP
+                                    3.SORTEDMAP
+                                    4.TREEMAP
+                                    5.NAVIGABLEMAP
+           
+  importent points:-
+  1. Both kay's,value's are objects only.
+  2. Duplicate key's are not allow,but duplicate values are allowed.
+  3. each key,value pair called Entry,hence a map consider as a collection of entry object.
+  
+##### METHODS:
+  1. Object put(Object key,Object value)
+            -To add one key value pair to the map,if the key is alredy present,then old will be replaced with new value and returns old value.
+  2. Void putAll(map m)
+            - put values of another map.
+  3. Object get(Object key)
+            -return a value which based on key.
+  4. Object remove(Object key)
+            - remove an key based value and key.
+  5. Boolean ContainsKey(Object key)
+            - if key is present it return true,otherwise false.
+  6. Boolean ContainValue(Object value)
+            - if value is present it return true,otherwise false.
+  7. Boolean isEmpty()
+            - return true when map is empty.
+  8. void clear()
+            - clear map data.
+  9. int size()
+            -return size of map.
+            
+###### ENTRY:-
+            A map is group of keyvalue pairs and each keyvalue pair is called an entry.hence,map is consider as emptyObject without existing map object,no chance of existing emptyobject.
+            empty interface define inside map interface:
+            interface map{
+                        interface entry{
+                                    object getkey();
+                                    object getvalue();
+                                    object setkey();
+                                    }
+                          }
+ 
+
+## 1.HASHMAP:
+  1. The underlying datastructure is hashtable.
+  2. Insertion order is not preserved and it is based on hashcode of keys.
+  3. Duplicate key are not allowed,the value can be duplicated.
+  4. Heterogeneous objects are allowed for both key and value.
+  5. Null is allowed for key(only once),null is allowed for values(many times).
+  6. Hashmap implements serilizable and cloneable interfaces,but not random access.
+  7. Hashmap is best choice when our frequent operation is Search operation.
+  
+  
+##### Constructors for HASHMAP:
+  1. HashMap hm=new HashMap();
+            -creates empty map with default initial capacity 16,with fill ratio is 0.75.
+  2. HashMap hm=new HashMap(int initialcapacity);
+            -creates an emptymap object with specific initial capacity and default fillratio:0.75.
+  3. HashMap hm=new HashMap(int initialcapacity,float fillratio);
+            - create an emptymap object with specific initial capacity and fillratio.
+  4. HashMap hm=new HashMap(map m);
+            -creates emptymap with another map data insertion.
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+
