@@ -1,0 +1,39 @@
+package programmes;
+import java.util.*;
+
+public class LinkedHashmap {
+
+	public static void main(String[] args) {
+
+	
+		LinkedHashMap lhm=new LinkedHashMap();
+		lhm.put(121,"naveen");
+		lhm.put(122,"nmango");
+		lhm.put(123,"govind");
+		lhm.put(124,"nepal");
+		lhm.put(125,"orange");
+		lhm.put(126,"banana");
+		lhm.put(127,"siva");
+		lhm.put(128,12345);
+		
+		
+			
+		
+		System.out.println(lhm);
+		//dispaly the all list
+		System.out.println(lhm.entrySet());
+		//dispaly only key value
+		System.out.println(lhm.keySet());
+		//it dispaly the values only
+		System.out.println(lhm.keySet());
+		
+		
+		System.out.println(lhm.remove(127));
+		
+		System.out.println(lhm.keySet());
+		
+	}
+	
+	}
+
+
