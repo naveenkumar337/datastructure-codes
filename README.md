@@ -264,8 +264,24 @@ linkedlist is the worst choice if our frequent operation is retrieval operation.
   4. HashMap hm=new HashMap(map m);
             -creates emptymap with another map data insertion.
   
+## 2.LINKEDHASHMAP:
+            Linkedhashmap is a child interface of Hashmap,only one difference it's introduced in 1.4 version.
+             It is also follow on key,value based list,here key allow only one null elements,but "value" can able to allow multiple elements.
+             It follow insertion order
+             LinkedHashMap is non synchronized
+            
+            
+            Syntax:
+                        LinkedHashMap<Integer,String> lsm=new LinkedHashMap
+##### Advantages:
+  1. It is cover the draw backs of the HashMap.
+  2. It is extend of Hashmap.
+  3. In Hashmap key,values are stored by using Hashcode,in LinkedHashmap it follows Insertion_order+Hashcode method.
+  4. Mainly used at when we store a values and key at our own way.
+  5. We mainly observe in this list at library systems.
+  6. It allows Heterogeneous data.
   
-  
+
   
   
   
