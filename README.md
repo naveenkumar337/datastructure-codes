@@ -280,9 +280,15 @@ linkedlist is the worst choice if our frequent operation is retrieval operation.
   4. Mainly used at when we store a values and key at our own way.
   5. We mainly observe in this list at library systems.
   6. It allows Heterogeneous data.
-  
-
-  
+ 
+## 4.TREEMAP
+            Treemap is chaild interface of naigablemap itss extends Sortedmap its Extends map. orally,Treemap is a chaild interface of map.
+            It was mainly used for to insert data into descending or ascending order with insertion order(key).it follows the insertion order.
+##### Methods:
+            1.Submap
+            2.Tailmap
+            3.Headmap
+            4.ascending order/ascending order
   
   
   
