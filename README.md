@@ -80,9 +80,9 @@ linkedlist is the worst choice if our frequent operation is retrieval operation.
 ---
 
 # VECTOR
-            vector implements dynamic array. It is similar to Arraylist,but with two difference 
-                        1.vector is synchronized.
-                        2.vector contain lagacy methods thats not part of collection framework.
+vector implements dynamic array. It is similar to Arraylist,but with two difference 
+            1. vector is synchronized.
+            2. vector contain lagacy methods thats not part of collection framework.
   ##### Vetor follows some points:
  * Its allow duplicate values.
  * Insertion order is Preserved.
@@ -106,8 +106,8 @@ linkedlist is the worst choice if our frequent operation is retrieval operation.
 4. Vector is slow because it is allow only one thread method at a time.
 ---
 
-# SETS
-            Set is chaild interface of collections. If we represents a group of individual objects as a single entity,whre duplicates are not allowed and insertion order not preserved, Then we use sets.sets does not contain any new methods.
+# SETS:
+Set is chaild interface of collections. If we represents a group of individual objects as a single entity,whre duplicates are not allowed and insertion order not preserved, Then we use sets.sets does not contain any new methods.
             
 Besically sets are:
 
@@ -306,8 +306,43 @@ LinkedHashMap is non synchronized
 - Mainly used at when we store a values and key at our own way.
 - We mainly observe in this list at library systems.
 - It allows Heterogeneous data.
+ ---
  
+## 3.SORTEDMAP:
+It is an child interface of collection framework(Map Interface). this interface extends map interface and provide a total ordering of elements.
+
+The default natural sorting order was done by key  and customized sorting order also done by key by using comparartor.
+
+**METHODS:**
+
+1. Object firstKey()
+2. Object lastKey()
+3. SortedMap headMap(Object Key)
+4. SortedMap tailMap(Object Key)
+5. SortedMap SubMap(Object Key1,Object Key2)
+6. Comparator comparator()
+
+ --- 
 ## 4.TREEMAP
+Uderlying datastructure is redblack tree.
+
+Insertion order is not preserved and its is based on some sorting order of keys.
+
+Duplicate keys are not allowed,but values can be duplicated.
+
+If we are depending on default natural sorting order compalsary keys should be homogeneos and comparable, otherwise we get CLASSCATEXCEPTION.
+
+If we declare our own sorting order the keys need not to homogeneous, values may be homogeneous based on compare method.
+
+NULLACEPTANCE: 
+---
+For non-empty treemap if we are trying to insert an entry with null key we will get ruen time exception:NULLPOINTER EXCEPTION.
+
+For empty treemap as the first entry with null key is allowed, but after inserting that entry if we trying to any other entry then we will get runtime exception: NULLPOINTER EXCEPTION.
+
+---
+*NOTE: the above null aceptance rull will bw aplicable only upto 1.6v, after that we don't have null aceptance for key*
+
 Treemap is chaild interface of naigablemap itss extends Sortedmap its Extends map. orally,Treemap is a chaild interface of map.
 
 It was mainly used for to insert data into descending or ascending order with insertion order(key).it follows the insertion order.
@@ -318,7 +353,17 @@ It was mainly used for to insert data into descending or ascending order with in
 3. Headmap
 4. ascending order/ascending order
   
-  
+CONSTRUCTOR
+---
+
+            1. TreeMap tm=new TreeMap()
+                        - default natural sorting order by keys
+            2. TreeMap tm=new TreeMap(Comparator c)
+                        - our own sorting order by using comparator
+            3. TreeMap tm=new TreeMap(SortedMap m)
+                        - by using sortingodrer map 
+            4. TreeMap tm=new TreeMap(Map m)
+                        - by using prevoius map 
   
   
   
