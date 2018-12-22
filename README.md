@@ -16,7 +16,9 @@ POP: it is used for delete or retrive data to the stack.
 PEEK: it display the top data in the stack.
 
 TRAVARSE: it display's the data in stack. 
-<img src="stack.jpg" >
+
+<img src="images/stack.bmp" >
+
 ---
 # ARRAY-LIST
 with code
@@ -392,7 +394,7 @@ important points:
 * Rear will preform both insert and delete operations.
 * Rear in insertion it will increse 1 upto queue is full.
 * Rear in deletion it will decrese 1 upto queue is empty.
-<img src="QUEUE.jpg" >
+<img src="images/QUEUE.jpg" >
 
 
   
