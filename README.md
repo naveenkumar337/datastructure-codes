@@ -16,7 +16,7 @@ POP: it is used for delete or retrive data to the stack.
 PEEK: it display the top data in the stack.
 
 TRAVARSE: it display's the data in stack. 
-
+<img src="stack.jpg" >
 ---
 # ARRAY-LIST
 with code
