@@ -366,7 +366,35 @@ CONSTRUCTOR
                         - by using prevoius map 
   
   
-  
+QUEUE
+===
+It is an algorithm.
+
+It is an linear datastructure.
+
+It is mainly absorve at ticket counter.
+
+It follow FIFO(first in first out).
+
+###### Methods
+
+---
+1. insert(add/offer)
+2. delete(remove/poll)
+3. travarse(display)
+
+---
+important points:
+----
+
+* in perform operation we required front and rear values.
+* Front key position is fixed at position 0.
+* Rear will preform both insert and delete operations.
+* Rear in insertion it will increse 1 upto queue is full.
+* Rear in deletion it will decrese 1 upto queue is empty.
+
+---
+
   
   
   
