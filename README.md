@@ -392,8 +392,8 @@ important points:
 * Rear will preform both insert and delete operations.
 * Rear in insertion it will increse 1 upto queue is full.
 * Rear in deletion it will decrese 1 upto queue is empty.
+<img src="QUEUE.jpg" >
 
----
 
   
   
