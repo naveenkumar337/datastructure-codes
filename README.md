@@ -397,7 +397,17 @@ important points:
 <img src="images/QUEUE.jpg" >
 
 
-  
+# SORTING TECHNIQUES:
+
+
+
+
+
+
+## 1.INSERTION SORT:
+---
+insertion sort is a simple sorting algorithm that works the way we sort playing cards in our hands.
+
   
   
   
