@@ -399,6 +399,9 @@ important points:
 
 # SORTING TECHNIQUES:
 
+1. Insertion sort
+2. Bubble sort
+3. Merge sort
 
 
 
@@ -408,14 +411,114 @@ important points:
 ---
 insertion sort is a simple sorting algorithm that works the way we sort playing cards in our hands.
 
+ During each iteration, the first remaining element of the input is only compared with the right-most element of the sorted subsection of the array.
+
+
   <img src="images/insertionsort.png" height="200">
   
+It is suitable for small sorting order and more efficient then quicksort,mergesort,etc...
+##### Alogorithm:
+                         i ← 1
+                    while i < length(A)
+                         j ← i
+                        while j > 0 and A[j-1] > A[j]
+                           swap A[j] and A[j-1]
+                            j ← j - 1
+                         end while
+                         i ← i + 1
+                    end while
+                   
+                   
+##### Best, worst, and average cases:
+The *best case* input is an array that is already sorted. In this case insertion sort has a linear running time *(i.e., O(n))*.
+
+The simplest *worst case* input is an array sorted in reverse order. The set of all worst case inputs consists of all arrays where each element is the smallest or second-smallest of the elements before it.This gives insertion sort a quadratic running time *(i.e., O(n2))*.
+
+The average case is also quadratic.
+
+
+## 2.Bubble sort:
+Bubble sort, sometimes referred to as sinking sort, is a simple sorting algorithm that repeatedly steps through the list, compares adjacent pairs and swaps them if they are in the wrong order. The pass through the list is repeated until the list is sorted.
+
+Bubble sort has a worst-case and average complexity of О(n2).
+
+In best case the complexity of bubble sort is only O(n).
+                  
+##### Algorithm:
+---
+            begin BubbleSort(list)
+
+                      for all elements of list
+                        if list[i] > list[i+1]
+                                    swap(list[i], list[i+1])
+                         end if
+                      end for
+   
+                    return list
+   
+            end BubbleSort
+
+## MergeSort:
+It follows Devide and Conquer approach.
+
+Devide means it devide orall array into tow sub array and each sub arrays are sorting.
+
+And those tow sub arrays combine into one array with using sorting method this is called conquer.
+
+##### Complexity:
+Time coplexity: Best case--> O(n log n)              
+
+Average case--> O(n log n)
+
+Worst Case--> O(n log n)
+  
+##### Algorithm:
   
   
-  
-  
-  
-  
+                        void merge(int Arr[], int start, int mid, int end) {
+
+	// create a temp array
+	int temp[] = new int[end - start + 1];
+	// crawlers for both intervals and for temp
+	int i = start, j = mid+1, k = 0;
+	// traverse both arrays and in each iteration add smaller of both elements in temp 
+	while(i <= mid && j <= end) {
+		if(Arr[i] <= Arr[j]) {
+			temp[k] = Arr[i];
+			k += 1; i += 1;
+		}
+		else {
+			temp[k] = Arr[j];
+			k += 1; j += 1;
+		}
+	}
+	// add elements left in the first interval 
+	while(i <= mid) {
+		temp[k] = Arr[i];
+		k += 1; i += 1;
+	}
+	// add elements left in the second interval 
+	while(j <= end) {
+		temp[k] = Arr[j];
+		k += 1; j += 1;
+	}
+	// copy temp to original interval
+	for(i = start; i <= end; i += 1) {
+		Arr[i] = temp[i - start]
+	}
+            }
+            // Arr is an array of integer type
+            // start and end are the starting and ending index of current interval of Arr
+            void mergeSort(int Arr[], int start, int end) {
+            	if(start < end) {
+	            	int mid = (start + end) / 2;
+            		mergeSort(Arr, start, mid);
+	            	mergeSort(Arr, mid+1, end);
+	            	merge(Arr, start, mid, end);
+	            }
+            }
+ 
+---
   
   
   
