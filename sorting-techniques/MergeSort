@@ -1,0 +1,132 @@
+package programmes;
+/**
+ * algoritam(a,b,m,n){
+i=j=k=1;
+while(i<=m && j<=n){
+if(a[i]<b[j]){
+	c[k]=a[i];
+	k++;
+	i++;
+}
+else{
+c[k]=b[j];
+k++;
+j++;
+}}
+for(;i<=n;i++){
+	c[k]=a[i];
+	k++;
+}
+for(;j<=m;j++){
+c[k]=b[j];
+k++;
+}}
+ */
+import java.util.*;
+
+public class mergesort {
+	
+	//sort method for performance
+	void sort(int a[],int start,int end) {
+		
+		if(start<end) {
+		//find mid value	
+		int mid=(start+end)/2;
+		
+		//sort methods for left and right sort
+		sort(a,start,mid);
+		sort(a,mid+1,end);
+		
+		//main sort for combination of left and right sort
+		//declaration of merge sort
+		merge(a,start,mid,end);
+	}
+	}
+	//initilization of merge method
+   void merge(int a[], int start, int mid, int end) {
+		
+	   //set list for sorting for left and right sorts method
+	   //n1-->start to mid
+	   //n2-->mid to end
+		int n1=mid-start+1;
+		int n2=end-mid;
+		
+		//creation of tow temporary arrays
+		int left[]=new int[n1];
+		int right[]=new int[n2];
+		
+		//copy the elements to the array with array limits
+		//copy left array up to mid values
+		for(int i=0;i<n1;i++)
+			left[i]=a[start+i];
+		//copy right array with mid to end
+		for(int j=0;j<n2;j++)
+			right[j]=a[j+1+mid];
+		
+		int i=0,j=0;
+		int k=start;
+		
+		
+		while(i<n1 && j<n2) {
+			//combine tow array
+			//here,sort elements from left array to right array
+			if(left[i]<=right[j]) {
+			a[k]=left[i];
+			i++;
+			}
+			else {
+				a[k]=right[j];
+				j++;
+			}
+			k++;
+		}
+		
+	//after sort remaining elements copy to the another array
+		//left array remaining elements copy to the another array
+		while(i<n1) {
+			a[k]=left[i];
+			i++;
+			k++;
+		}
+		//right array remaining elements copy to the another Array 
+		while(j<n2) {
+			a[k]=right[j];
+			j++;
+			k++;
+			}
+	}
+   
+   
+
+	public static void main(String[] args) {
+		
+	Scanner sc=new Scanner(System.in);
+	
+	System.out.println("enter size of array:");
+	int n=sc.nextInt();
+	//declaration of array with size of array
+	int[] a=new int[n];
+	
+	System.out.println("enter elements:");
+	for(int x=0;x<n;x++) {
+		a[x]=sc.nextInt();
+		
+	}
+	System.out.println("Before sort:");
+	for(int i=0;i<a.length;i++)
+		System.out.println(a[i]);
+	//object for main class
+	mergesort obj=new mergesort();
+	obj.sort(a, 0, a.length-1);//two sort methods are perform here.
+	
+	//print list
+	System.out.println("After Sorting:");
+	for(int i=0;i<a.length;i++) {
+		System.out.println(a[i]);
+	}
+	
+	
+	}
+	
+
+}
